@@ -2,13 +2,13 @@
 /**
  * Plugin Name: WP Data Sync - WooCommerce
  * Plugin URI:  https://wpdatasync.com
- * Description: Sync raw product data to your WooCommerce Store.
+ * Description: Sync raw product data into your WooCommerce Store.
  * Version:     1.0
  * Author:      KevinBrent
  * Author URI:  https://wpdatasync.com
  * License:     GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: wp_data_sync
+ * Text Domain: wp-data-sync-woocommerce
  * Domain Path: /languages
  *
  * Package:     WP_DataSync
@@ -172,23 +172,27 @@ add_action( 'wp_data_sync_after_process', function( $post_id, $data ) {
 
 				// If the attribute does not exist, create it.
 				$attribute_id = wc_create_attribute( [
-						'name'         => $raw_name,
-						'slug'         => $attribute_name,
-						'type'         => 'select',
-						'order_by'     => 'menu_order',
-						'has_archives' => FALSE,
-					] );
+					'name'         => $raw_name,
+					'slug'         => $attribute_name,
+					'type'         => 'select',
+					'order_by'     => 'menu_order',
+					'has_archives' => FALSE,
+				] );
 
 				// Register as taxonomy while importing.
-				register_taxonomy( $taxonomy_name, apply_filters( 'woocommerce_taxonomy_objects_' . $taxonomy_name, [ 'product' ] ), apply_filters( 'woocommerce_taxonomy_args_' . $taxonomy_name, [
-							'labels'       => [
-								'name' => $raw_name,
-							],
-							'hierarchical' => TRUE,
-							'show_ui'      => FALSE,
-							'query_var'    => TRUE,
-							'rewrite'      => FALSE,
-						] ) );
+				register_taxonomy(
+					$taxonomy_name,
+					apply_filters( 'woocommerce_taxonomy_objects_' . $taxonomy_name, [ 'product' ] ),
+					apply_filters( 'woocommerce_taxonomy_args_' . $taxonomy_name, [
+						'labels'       => [
+							'name' => $raw_name,
+						],
+						'hierarchical' => TRUE,
+						'show_ui'      => FALSE,
+						'query_var'    => TRUE,
+						'rewrite'      => FALSE,
+					] )
+				);
 
 				return $taxonomy_name;;
 
@@ -226,3 +230,28 @@ add_action( 'wp_data_sync_after_process', function( $post_id, $data ) {
 	}
 
 }, 10, 2 );
+
+/**
+ * Show a notice if the WP Data Sync plugin is not activated.
+ */
+
+add_action( 'admin_notices', function() {
+
+	if ( is_plugin_active( 'wp-data-sync/wp-data-sync.php' ) ) {
+		return;
+	}
+
+	$class = 'notice notice-error';
+	$message = __( 'NOTICE: The WP Data Sync plugin is required to use the WP Data Sync - WooCommerce extension.', 'wp-data-sync' );
+
+	printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
+
+} );
+
+/**
+ * Load the plugin text domain.
+ */
+
+add_action( 'init', function() {
+	load_plugin_textdomain( 'wp-data-sync-woocommerce', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+} );

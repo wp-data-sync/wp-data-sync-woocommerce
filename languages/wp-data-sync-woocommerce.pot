@@ -1,0 +1,32 @@
+# Copyright (C) 2020 KevinBrent
+# This file is distributed under the same license as the WP Data Sync - WooCommerce plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Data Sync - WooCommerce 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-data-sync-woocommerce\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-23T22:50:14+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.1.0\n"
+"X-Domain: wp-data-sync-woocommerce\n"
+
+#. Plugin Name of the plugin
+msgid "WP Data Sync - WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://wpdatasync.com"
+msgstr ""
+
+#. Description of the plugin
+msgid "Sync raw product data into your WooCommerce Store."
+msgstr ""
+
+#. Author of the plugin
+msgid "KevinBrent"
+msgstr ""
