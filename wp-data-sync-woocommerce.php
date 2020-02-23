@@ -5,7 +5,7 @@
  * Description: Sync raw product data into your WooCommerce Store.
  * Version:     1.0
  * Author:      KevinBrent
- * Author URI:  https://wpdatasync.com
+ * Author URI:  https://kevinbrent.com
  * License:     GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: wp-data-sync-woocommerce
