@@ -3,9 +3,9 @@
  * Plugin Name: WP Data Sync - WooCommerce
  * Plugin URI:  https://wpdatasync.com
  * Description: Sync raw product data into your WooCommerce Store.
- * Version:     1.0
- * Author:      KevinBrent
- * Author URI:  https://kevinbrent.com
+ * Version:     1.0.1
+ * Author:      WP Data Sync
+ * Author URI:  https://wpdatasync.com/about-the-developer/
  * License:     GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: wp-data-sync-woocommerce
@@ -210,7 +210,11 @@ add_action( 'wp_data_sync_after_process', function( $post_id, $data ) {
 				$attach_ids = [];
 
 				foreach ( $product_gallery as $image_url ) {
-					$attach_ids[] = $this->attachment( $post_id, $image_url );
+
+					if ( $attach_id = $this->attachment( $post_id, $image_url ) ) {
+						$attach_ids[] = $attach_id;
+					}
+
 				}
 
 				$product_gallery_ids = apply_filters( 'wp_data_sync_product_gallery_ids', join( ',', $attach_ids ) );
