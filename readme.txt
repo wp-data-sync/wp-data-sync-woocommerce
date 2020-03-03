@@ -7,8 +7,6 @@ Requires PHP: 5.6
 Stable tag: /trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-WC requires at least: 2.5
-WC tested up to: 3.9.2
 
 Sync raw data into your WooCommerce store from JSON or CSV
 
@@ -48,5 +46,8 @@ Yes. We have [Developer Documentation](https://wpdatasync.com/documentation/ "De
 
 = 1.0.1 =
 * Tweek - Verify attachment was accepted and inserted
+
+= 1.0.2 =
+* Tweek - Move WC tested versions into plugin header
 
 == Upgrade Notice ==
