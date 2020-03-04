@@ -1,0 +1,15 @@
+== WP Data Sync for WooCommerce Change Log ==
+
+= 2020-03-04 version 1.0.3 =
+* Add plugin action link for settings
+
+= 2020-03-01 version 1.0.2 =
+* Tweek - Move WC tested versions into plugin header
+
+= 2020-02-28 version 1.0.1 =
+* Tweek - Verify attachment was accepted and inserted
+
+= 2020-02-24 version 1.0 =
+* Initial commit
+
+== Upgrade Notice ==

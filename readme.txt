@@ -1,6 +1,6 @@
 === WP Data Sync for Woocommerce ===
 Contributors: kevin-brent
-Tags: woocommerce, sync-data, api-feed, json-feed, data-transfer, csv-import, data-sync
+Tags: woocommerce, sync products, sync data, api feed, json feed, data transfer, csv import, data sync
 Requires at least: 5.0
 Tested up to: 5.3.2
 Requires PHP: 5.6
@@ -38,16 +38,3 @@ Yes. We have [Developer Documentation](https://wpdatasync.com/documentation/ "De
 == Screenshots ==
 
 1. WP Data Sync: Take the headache out of syncing raw data into your WooCommerce store.
-
-== Change Log ==
-
-= 1.0 =
-* Initial commit
-
-= 1.0.1 =
-* Tweek - Verify attachment was accepted and inserted
-
-= 1.0.2 =
-* Tweek - Move WC tested versions into plugin header
-
-== Upgrade Notice ==
