@@ -20,7 +20,7 @@ The WP Data Sync servers handle the heavy workload. Keeping your production serv
 
 __Helpful Resources__
 
-[WP Data Sync](https://wpdatasync.com/support/ "WP Data Sync")
+[WP Data Sync](https://wpdatasync.com "WP Data Sync")
 [Developer Documentation](https://wpdatasync.com/docunentation/ "Developer Documentation")
 
 == Installation ==
@@ -31,9 +31,29 @@ __Helpful Resources__
 
 == Frequently Asked Questions ==
 
-= Is this plugin developer friendly? =
+= How does WP Data Sync work? =
 
-Yes. We have [Developer Documentation](https://wpdatasync.com/documentation/ "Developer Documentation").
+We process data in 3 steps:
+
+1. WP Data Sync uses it's API to process raw data from a JSON feed, or CSV import.
+2. WP Data Sync API sends a prefect WordPress post object to the website.
+3. WP Data Sync plugin inserts or updates the data in the WordPress website.
+
+= How many websites can I sync using the same data? =
+
+WP Data Sync API can sync the same data into as many websites as you like. Each website is considered a unique endpoint.
+
+= How many objects can I sync each month? =
+
+WP Data Sync can sync as many objects as you need. However, the business license includes up to 10,000 objects per month. Your account is auto-scaled depending on how many objects you sync.
+
+= Is my data private or do other users have access to my data? =
+
+Your data is private to you. No one else has access to the data, except for the WP Data Sync team. We do not sell the data. We only have access so we can offer techinal support to our clients.
+
+= Is WP Data Sync developer friendly? =
+
+Yes. We have WordPress hooks and filters throughout the plugin to allow for almost any situation. [Developer Documentation](https://wpdatasync.com/docunentation/ "Developer Documentation")
 
 == Screenshots ==
 
