@@ -3,7 +3,7 @@
  * Plugin Name: WP Data Sync - WooCommerce
  * Plugin URI:  https://wpdatasync.com/products/
  * Description: Sync raw product data into your WooCommerce Store.
- * Version:     1.0.3
+ * Version:     1.0.4
  * Author:      WP Data Sync
  * Author URI:  https://wpdatasync.com
  * License:     GPL2
@@ -130,7 +130,7 @@ add_action( 'wp_data_sync_after_process', function( $post_id, $data ) {
 
 					$product_attributes[ $name ] = [
 						'name'         => $is_taxonomy ? $taxonomy : $name,
-						'value'        => $is_taxonomy ? 0 : $values,
+						'value'        => $is_taxonomy ? 0 : join( ',', $values ),
 						'position'     => 0,
 						'is_visible'   => 1,
 						'is_variation' => 0,
