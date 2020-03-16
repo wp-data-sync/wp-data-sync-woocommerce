@@ -21,6 +21,7 @@ The WP Data Sync servers handle the heavy workload. Keeping your production serv
 __Helpful Resources__
 
 [WP Data Sync](https://wpdatasync.com "WP Data Sync")
+[WP Data Sync Blog](https://wpdatasync.com/blog/ "WP Data Sync Blog")
 [Developer Documentation](https://wpdatasync.com/docunentation/ "Developer Documentation")
 
 == Installation ==
@@ -45,7 +46,7 @@ WP Data Sync API can sync the same data into as many websites as you like. Each 
 
 = How many objects can I sync each month? =
 
-WP Data Sync can sync as many objects as you need. However, the business license includes up to 10,000 objects per month. Your account is auto-scaled depending on how many objects you sync.
+WP Data Sync can sync as many objects as you need. Your account is auto-scaled depending on how many objects you sync.
 
 = Is my data private or do other users have access to my data? =
 
@@ -57,7 +58,7 @@ Yes. We have WordPress hooks and filters throughout the plugin to allow for almo
 
 == Screenshots ==
 
-1. WP Data Sync: Take the headache out of syncing raw data into your WooCommerce store.
+1. WP Data Sync: Data Flow
 
 == Change Log ==
 
