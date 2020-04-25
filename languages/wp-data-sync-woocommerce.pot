@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-04-25T17:23:30+00:00\n"
+"POT-Creation-Date: 2020-04-25T17:28:31+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.1.0\n"
 "X-Domain: wp-data-sync-woocommerce\n"
@@ -32,4 +32,12 @@ msgstr ""
 
 #. Author URI of the plugin
 msgid "https://wpdatasync.com"
+msgstr ""
+
+#: app/functions/admin-notices.php:25
+msgid "NOTICE: The WP Data Sync plugin is required to use the WP Data Sync - WooCommerce extension."
+msgstr ""
+
+#: app/functions/plugin-action-links.php:26
+msgid "Settings"
 msgstr ""

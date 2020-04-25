@@ -22,7 +22,7 @@ add_action( 'admin_notices', function() {
 	}
 
 	$class = 'notice notice-error';
-	$message = __( 'NOTICE: The WP Data Sync plugin is required to use the WP Data Sync - WooCommerce extension.', 'wp-data-sync' );
+	$message = __( 'NOTICE: The WP Data Sync plugin is required to use the WP Data Sync - WooCommerce extension.', 'wp-data-sync-woocommerce' );
 
 	printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
 

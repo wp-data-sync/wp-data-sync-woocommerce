@@ -23,7 +23,7 @@ add_filter( 'plugin_action_links', function( $links, $file ) {
 
 	if ( $file === WP_DATA_SYNC_WOO_PLUGIN ) {
 
-		$links[] = '<a href="options-general.php?page=wp-data-sync&active_tab=woocommerce">' . __( 'Settings' ) . '</a>';
+		$links[] = '<a href="options-general.php?page=wp-data-sync&active_tab=woocommerce">' . __( 'Settings', 'wp-data-sync-woocommerce' ) . '</a>';
 
 	}
 
