@@ -11,40 +11,23 @@
  * Text Domain: wp-data-sync-woocommerce
  * Domain Path: /languages
  *
- * WC requires at least: 2.5
- * WC tested up to: 4.0.1
- *
  * Package:     WP_DataSync
  */
 
-namespace WP_DataSync\App;
+add_action( 'admin_notices', function() {
 
-$defines = [
-	'WP_DATA_SYNC_WOO_VERSION' => '1.0.7',
-	'WP_DATA_SYNC_WOO_PLUGIN'  => plugin_basename( __FILE__ )
-];
+	$class = 'notice notice-error';
+	$p1    = __( 'NOTICE: The WP Data Sync for WooCommerce plugin has been combined with the WP Data Sync plugin.', 'wp-data-sync' );
+	$p2    = __( 'To avoid conflicts, please deativate the WP Data Sync for WooCommerce plugin.', 'wp-data-sync' );
+	$url   = 'https://wordpress.org/plugins/wp-data-sync/';
 
-foreach ( $defines as $define => $value ) {
-	if ( ! defined( $define ) ) {
-		define( $define, $value );
-	}
-}
+	printf(
+		'<div class="%1$s"><p><b>%2$s</b></p><p>%3$s</p><p><a href="%4$s" target="_blank">%5$s</a></p></div>',
+		esc_attr( $class ),
+		esc_html( $p1 ),
+		esc_html( $p2 ),
+		esc_url( $url ),
+		esc_html( 'WP Data Sync Plugin' )
+	);
 
-foreach ( glob( plugin_dir_path( __FILE__ ) . 'app/**/*.php' ) as $file ) {
-	require_once $file;
-}
-
-/**
- * After process hook.
- */
-
-add_action( 'wp_data_sync_after_process', function( $post_id, $data, $data_sync ) {
-
-	if ( class_exists( 'WooCommerce', FALSE ) ) {
-
-		$wc_sync = WC_WP_DataSync::instance( $data_sync );
-		$wc_sync->wc_process( $post_id, $data );
-
-	}
-
-}, 10, 3 );
+} );

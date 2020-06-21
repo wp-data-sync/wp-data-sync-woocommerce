@@ -8,60 +8,12 @@ Stable tag: /trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Sync raw data into your WooCommerce store from JSON or CSV
+Sync raw data into your WordPress or WooCommerce website from mutiple data sources and formats.
 
 == Description ==
 
-WP Data Sync for WooCommerce extends the WP Data Sync plugin to sync WooCommerce product data into your WooCommerce store.
-
-No more CSV import failures or server timeouts. The WP Data Sync API will import your raw data, then securely deliver perfect WordPress objects to your WordPress website.
-
-The WP Data Sync servers handle the heavy workload. Keeping your production server up and running. This results in a better overall user experience.
-
-__Helpful Resources__
-
-[WP Data Sync](https://wpdatasync.com "WP Data Sync")
-[WP Data Sync Blog](https://wpdatasync.com/blog/ "WP Data Sync Blog")
-[Developer Documentation](https://wpdatasync.com/docunentation/ "Developer Documentation")
-
-== Installation ==
-
-1. Upload the plugin files to the `/wp-content/plugins` directory, or install the plugin through the WordPress plugins screen directly.
-2. Activate the plugin through the 'Plugins' screen in WordPress Admin.
-3. Navigate to WP Admin > Settings > WP Data Sync.
-
-== Frequently Asked Questions ==
-
-= How does WP Data Sync work? =
-
-We process data in 3 steps:
-
-1. WP Data Sync uses it's API to process raw data from a JSON feed, or CSV import.
-2. WP Data Sync API sends a prefect WordPress post object to the website.
-3. WP Data Sync plugin inserts or updates the data in the WordPress website.
-
-= How many websites can I sync using the same data? =
-
-WP Data Sync API can sync the same data into as many websites as you like. Each website is considered a unique endpoint.
-
-= How many objects can I sync each month? =
-
-WP Data Sync can sync as many objects as you need. Your account is auto-scaled depending on how many objects you sync.
-
-= Is my data private or do other users have access to my data? =
-
-Your data is private to you. No one else has access to the data, except for the WP Data Sync team. We do not sell the data. We only have access so we can offer techinal support to our clients.
-
-= Is WP Data Sync developer friendly? =
-
-Yes. We have WordPress hooks and filters throughout the plugin to allow for almost any situation. [Developer Documentation](https://wpdatasync.com/docunentation/ "Developer Documentation")
+The functionality of this plugin has been combined with the [WP Data Sync](https://wordpress.org/plugins/wp-data-sync/ "WP Data Sync") plugin. Please install and use the [WP Data Sync](https://wordpress.org/plugins/wp-data-sync/ "WP Data Sync") plugin only.
 
 == Screenshots ==
 
 1. WP Data Sync: Data Flow
-
-== Change Log ==
-
-[Change Log](https://wpdatasync.com/plugin/wp-data-sync-for-woocommerce/ "Change Log")
-
-== Upgrade Notice ==
