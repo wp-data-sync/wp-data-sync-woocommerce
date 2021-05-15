@@ -2,8 +2,8 @@
 /**
  * Plugin Name: WP Data Sync - WooCommerce
  * Plugin URI:  https://wpdatasync.com/products/
- * Description: Sync raw product data into your WooCommerce Store.
- * Version:     1.0.7
+ * Description: Add data fields to your WooCommecre products
+ * Version:     2.0.0
  * Author:      WP Data Sync
  * Author URI:  https://wpdatasync.com
  * License:     GPL2
@@ -14,20 +14,23 @@
  * Package:     WP_DataSync
  */
 
-add_action( 'admin_notices', function() {
+namespace WP_DataSync\Woo;
 
-	$class = 'notice notice-error';
-	$p1    = __( 'NOTICE: The WP Data Sync for WooCommerce plugin has been combined with the WP Data Sync plugin.', 'wp-data-sync' );
-	$p2    = __( 'To avoid conflicts, please deativate the WP Data Sync for WooCommerce plugin.', 'wp-data-sync' );
-	$url   = 'https://wordpress.org/plugins/wp-data-sync/';
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
-	printf(
-		'<div class="%1$s"><p><b>%2$s</b></p><p>%3$s</p><p><a href="%4$s" target="_blank">%5$s</a></p></div>',
-		esc_attr( $class ),
-		esc_html( $p1 ),
-		esc_html( $p2 ),
-		esc_url( $url ),
-		esc_html( 'WP Data Sync Plugin' )
-	);
+$defines = [
+	'WPDS_WOO_VERSION' => '2.0.0',
+	'WPDS_WOO_CAP'     => 'manage_options'
+];
 
-} );
+foreach ( $defines as $define => $value ) {
+	if ( ! defined( $define ) ) {
+		define( $define, $value );
+	}
+}
+
+foreach ( glob( plugin_dir_path( __FILE__ ) . 'includes/**/*.php' ) as $file ) {
+	require_once $file;
+}
