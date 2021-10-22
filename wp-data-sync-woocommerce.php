@@ -47,34 +47,3 @@ add_action( 'plugins_loaded', function() {
 	} );
 
 } );
-
-/**
- * Process WooCommerce.
- */
-
-add_action( 'wp_data_sync_after_process', function ( $post_id, $data_sync ) {
-
-	$post_type = $data_sync->get_post_type();
-
-	if ( 'shop_order' === $post_type || 'shop_order_refund' === $post_type ) {
-		return WC_Order_DataSync::instance()->wc_process( $data_sync );
-	}
-
-
-}, 10, 2 );
-
-/**
- * WooCommerce ItemRequest
- */
-
-add_filter( 'wp_data_sync_item_request', function( $item_data, $item_id, $item_request ) {
-
-	$post_type = $item_request->get_post_type();
-
-	if ( 'shop_order' === $post_type || 'shop_order_refund' === $post_type ) {
-		return WC_Order_ItemRequest::instance()->wc_process( $item_data, $item_id, $item_request );
-	}
-
-	return $item_data;
-
-}, 10, 3 );
