@@ -2,21 +2,21 @@
 Contributors: kevin-brent
 Tags: brand, woocommerce, sync products, sync data, api feed, json feed, data transfer, csv import, data sync
 Requires at least: 5.0
-Tested up to: 5.7.1
+Tested up to: 5.8.1
 Requires PHP: 5.6
 Stable tag: /trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add additional WooCommerce data fields including brand taxonomy for WooCommerce products
+Add additional functionality to improve WooCommerce compatibility
 
 == Description ==
 
-Add additional WooCommerce data fields that can be synced with your products.
+Add additional functionality to improve WooCommerce compatibility
 
 __Includes:__
 
-&#x2611; Brand
+&#x2611; Brand Taxonomy
 &#x2611; Manufacturer Part Number
 &#x2611; Global Trade Item Number
 &#x2611; International Standard Book Number
