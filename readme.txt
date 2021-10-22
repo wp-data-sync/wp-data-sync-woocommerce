@@ -16,6 +16,8 @@ Add additional functionality to improve WooCommerce compatibility
 
 __Includes:__
 
+&#x2611; Manage Backorder Status
+&#x2611; Product Weight Conversion
 &#x2611; Brand Taxonomy
 &#x2611; Manufacturer Part Number
 &#x2611; Global Trade Item Number
