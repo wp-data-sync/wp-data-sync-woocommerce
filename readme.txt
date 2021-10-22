@@ -30,3 +30,10 @@ Here are a variety of links that we’ve found helpful in explaining our plugin 
 [Developer Documentation - Getting Started](https://wpdatasync.com/documentation-type/getting-started/?affid=admin "Developer Documentation - Getting Started")
 [Developer Documentation - Actions](https://wpdatasync.com/documentation-type/actions/?affid=admin "Developer Documentation - Actions")
 [Developer Documentation - Filters](https://wpdatasync.com/documentation-type/filters/?affid=admin "Developer Documentation - Filters")
+
+== Change Log ==
+
+[Change Log](https://wpdatasync.com/plugin/wp-data-sync-for-woocommerce/?affid=admin "Change Log")
+
+== Upgrade Notice ==
+
