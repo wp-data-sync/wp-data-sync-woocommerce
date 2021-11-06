@@ -8,7 +8,7 @@ Stable tag: /trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add additional functionality to [WP Data Sync](https://wordpress.org/plugins/wp-data-sync/ "WP Data Sync") plugin to improve WooCommerce compatibility
+Add additional functionality to WP Data Sync plugin to improve WooCommerce compatibility
 
 == Description ==
 
@@ -16,7 +16,7 @@ Add additional functionality to [WP Data Sync](https://wordpress.org/plugins/wp-
 
 __Includes:__
 
-&#x2611; Manage Backorder Status - WP Data sync setting
+&#x2611; Manage Backorder Status - WP Data Sync setting
 &#x2611; Product Weight Conversion - - WP Data Sync setting
 &#x2611; Brand Taxonomy for Products
 &#x2611; Manufacturer Part Number - product setting
