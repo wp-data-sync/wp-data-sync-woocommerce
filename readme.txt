@@ -19,9 +19,10 @@ __Includes:__
 &#x2611; Manage Backorder Status - WP Data Sync setting
 &#x2611; Product Weight Conversion - - WP Data Sync setting
 &#x2611; Brand Taxonomy for Products
-&#x2611; Manufacturer Part Number - product setting
-&#x2611; Global Trade Item Number - product setting
-&#x2611; International Standard Book Number - product setting
+&#x2611; Manufacturer Part Number - product/variation setting
+&#x2611; Global Trade Item Number - product/variation setting
+&#x2611; International Standard Book Number - product/variation setting
+&#x2611; Includes Additional Order Meta Fields
 
 __What if I want to know more about WP Data Sync?__
 

@@ -40,7 +40,7 @@ add_filter( 'wp_data_sync_settings', function( $settings, $_settings ) {
 			'basename'          => 'select',
 			'selected'          => get_option( 'wp_data_sync_convert_product_weight' ),
 			'name'              => 'wp_data_sync_convert_product_weight',
-			'class'             => 'conveet-product-weight widefat',
+			'class'             => 'convert-product-weight widefat',
 			'info'              => __( 'Convert the product weight. If you do not see the conversion you need. Please contact our support team to have it added.', 'wp-data-sync-woocommerce' ),
 			'values'            => [
 				'0'               => __( 'Do Not Convert Weight', 'wp-data-sync-woocommerce' ),

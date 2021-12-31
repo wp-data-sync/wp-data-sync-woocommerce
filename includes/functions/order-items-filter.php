@@ -24,14 +24,41 @@ add_filter( 'wp_data_sync_order_items', function( $order_items, $order ) {
 
 	foreach ( $order_items as $item_id => $item ) {
 
-		$product_id = $item['product_id'];
+		$id = empty( $item['variation_id'] ) ? $item['product_id'] : $item['variation_id'];
 
-		$order_items[ $item_id ]['mpn']   = get_post_meta( $product_id, '_mpn', TRUE );
-		$order_items[ $item_id ]['gtin8'] = get_post_meta( $product_id, '_gtin8', TRUE );
-		$order_items[ $item_id ]['isbn']  = get_post_meta( $product_id, '_isbn', TRUE );
+		$order_items[ $item_id ]['item_id'] = $id;
+
+		foreach ( order_item_keys() as $key ) {
+			$order_items[ $item_id ][ $key ] = get_post_meta( $id, "_$key", TRUE );
+		}
 
 	}
 
 	return $order_items;
 
 }, 10, 2 );
+
+/**
+ * Order Item Keys
+ *
+ * @return array
+ */
+
+function order_item_keys() {
+
+	return apply_filters( 'wp_data_sync_order_item_keys', [
+		'mpn',
+		'gtin8',
+		'isbn',
+		'price',
+		'sale_price',
+		'regular_price',
+		'sku',
+		'height',
+		'length',
+		'width',
+		'weight',
+		'shipping_class'
+	] );
+
+}

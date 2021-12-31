@@ -60,3 +60,57 @@ add_action('woocommerce_process_product_meta', function( $product_id ) {
 	$product->save();
 
 });
+
+/**
+ * Add variable product data fields.
+ */
+
+add_action( 'woocommerce_variation_options_pricing', function( $loop, $variation_data, $variation ) {
+
+	woocommerce_wp_text_input([
+		'id'          => "_mpn[$loop]",
+		'label'       => __( 'MPN', 'wp-data-sync-woocommerce' ),
+		'desc_tip'    => TRUE,
+		'description' => __( 'Manufacturer Part Number', 'wp-data-sync-woocommerce' ),
+		'value'       => get_post_meta( $variation->ID, '_mpn', TRUE )
+	]);
+
+	woocommerce_wp_text_input([
+		'id'          => "_gtin8[$loop]",
+		'label'       => __( 'GTIN', 'wp-data-sync-woocommerce' ),
+		'desc_tip'    => TRUE,
+		'description' => __( 'Global Trade Item Number', 'wp-data-sync-woocommerce' ),
+		'value'       => get_post_meta( $variation->ID, '_gtin8', TRUE )
+	]);
+
+	woocommerce_wp_text_input([
+		'id'          => "_isbn[$loop]",
+		'label'       => __( 'ISBN', 'wp-data-sync-woocommerce' ),
+		'desc_tip'    => TRUE,
+		'description' => __( 'International Standard Book Number', 'wp-data-sync-woocommerce' ),
+		'value'       => get_post_meta( $variation->ID, '_isbn', TRUE )
+	]);
+
+}, 10, 3 );
+
+/**
+ * Save variable product data fields.
+ */
+
+add_action( 'woocommerce_save_product_variation', function( $variation_id, $i ) {
+
+	$keys = [ '_mpn', '_gtin8', '_isbn' ];
+
+	foreach ( $keys as $key ) {
+
+		if ( isset( $_POST[ $key ][ $i ] ) ) {
+
+			$value = sanitize_text_field( $_POST[ $key ][ $i ] );
+
+			update_post_meta( $variation_id, $key, esc_attr( $value ) );
+
+		}
+
+	}
+
+}, 10, 2 );
