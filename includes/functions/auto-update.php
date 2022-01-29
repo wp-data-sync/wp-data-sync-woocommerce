@@ -30,7 +30,7 @@ add_filter( 'auto_update_plugin', function( $update, $item ) {
 
 	if ( isset( $item->slug ) && 'wp-data-sync-woocommerce' === $item->slug ) {
 
-		if ( Settings::is_checked( 'wp_data_sync_auto_update' ) ) {
+		if ( class_exists( 'WP_DataSync\App\Settings' ) && Settings::is_checked( 'wp_data_sync_auto_update' ) ) {
 			return TRUE;
 		}
 

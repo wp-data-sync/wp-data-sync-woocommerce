@@ -52,6 +52,34 @@ add_filter( 'wp_data_sync_settings', function( $settings, $_settings ) {
 		]
 	];
 
+	$settings['woocommerce'][] = [
+		'key' 		=> 'wp_data_sync_regular_price_adjustment',
+		'label'		=> __( 'Regular Price Adjustment (%)', 'wp-data-sync-woocommerce' ),
+		'callback'  => 'input',
+		'args'      => [
+			'sanitize_callback' => 'floatval',
+			'basename'          => 'text-input',
+			'type'		        => 'number',
+			'class'		        => 'regular-price-adjustment',
+			'placeholder'       => '',
+			'info'              => __( 'Multiply price to add/subtract price adjustment.', 'wp-data-sync-woocommerce' )
+		]
+	];
+
+	$settings['woocommerce'][] = [
+		'key' 		=> 'wp_data_sync_sale_price_adjustment',
+		'label'		=> __( 'Sale Price Adjustment (%)', 'wp-data-sync-woocommerce' ),
+		'callback'  => 'input',
+		'args'      => [
+			'sanitize_callback' => 'floatval',
+			'basename'          => 'text-input',
+			'type'		        => 'number',
+			'class'		        => 'sale-price-adjustment',
+			'placeholder'       => '',
+			'info'              => __( 'Multiply price to add/subtract price adjustment.', 'wp-data-sync-woocommerce' )
+		]
+	];
+
 	return $settings;
 
 }, 99, 2 );

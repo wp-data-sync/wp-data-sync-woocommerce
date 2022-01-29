@@ -47,6 +47,7 @@ add_filter( 'wp_data_sync_order_items', function( $order_items, $order ) {
 function order_item_keys() {
 
 	return apply_filters( 'wp_data_sync_order_item_keys', [
+		'upc',
 		'mpn',
 		'gtin8',
 		'isbn',

@@ -2,7 +2,7 @@
 Contributors: kevin-brent
 Tags: brand, woocommerce, sync products, sync data, api feed, json feed, data transfer, csv import, data sync
 Requires at least: 5.0
-Tested up to: 5.8.1
+Tested up to: 5.9.0
 Requires PHP: 5.6
 Stable tag: /trunk
 License: GPLv2
@@ -18,11 +18,13 @@ __Includes:__
 
 &#x2611; Manage Backorder Status - WP Data Sync setting
 &#x2611; Product Weight Conversion - - WP Data Sync setting
+&#x2611; Product Price Adjustments - - WP Data Sync setting
 &#x2611; Brand Taxonomy for Products
-&#x2611; Manufacturer Part Number - product/variation setting
-&#x2611; Global Trade Item Number - product/variation setting
-&#x2611; International Standard Book Number - product/variation setting
-&#x2611; Includes Additional Order Meta Fields
+&#x2611; Universal Product Code(upc) - product/variation setting
+&#x2611; Manufacturer Part Number(mpn) - product/variation setting
+&#x2611; Global Trade Item Number(gtin) - product/variation setting
+&#x2611; International Standard Book Number(isbn) - product/variation setting
+&#x2611; Additional Order Meta Fields
 
 __What if I want to know more about WP Data Sync?__
 

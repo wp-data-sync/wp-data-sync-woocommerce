@@ -18,6 +18,13 @@ namespace WP_DataSync\Woo\App;
 add_action( 'woocommerce_product_options_general_product_data', function() {
 
 	woocommerce_wp_text_input([
+		'id'          => '_upc',
+		'label'       => __( 'UPC', 'wp-data-sync-woocommerce' ),
+		'desc_tip'    => TRUE,
+		'description' => __( 'Universal Product Code', 'wp-data-sync-woocommerce' )
+	]);
+
+	woocommerce_wp_text_input([
 		'id'          => '_mpn',
 		'label'       => __( 'MPN', 'wp-data-sync-woocommerce' ),
 		'desc_tip'    => TRUE,
@@ -48,6 +55,9 @@ add_action('woocommerce_process_product_meta', function( $product_id ) {
 
 	$product = wc_get_product( $product_id );
 
+	$_upc = isset( $_POST['_upc'] ) ? sanitize_text_field( $_POST['_upc'] ) : '';
+	$product->update_meta_data( '_upc', $_upc );
+
 	$_mpn = isset( $_POST['_mpn'] ) ? sanitize_text_field( $_POST['_mpn'] ) : '';
 	$product->update_meta_data( '_mpn', $_mpn );
 
@@ -66,6 +76,14 @@ add_action('woocommerce_process_product_meta', function( $product_id ) {
  */
 
 add_action( 'woocommerce_variation_options_pricing', function( $loop, $variation_data, $variation ) {
+
+	woocommerce_wp_text_input([
+		'id'          => "_upc[$loop]",
+		'label'       => __( 'UPC', 'wp-data-sync-woocommerce' ),
+		'desc_tip'    => TRUE,
+		'description' => __( 'Universal Product Code', 'wp-data-sync-woocommerce' ),
+		'value'       => get_post_meta( $variation->ID, '_upc', TRUE )
+	]);
 
 	woocommerce_wp_text_input([
 		'id'          => "_mpn[$loop]",
@@ -99,7 +117,7 @@ add_action( 'woocommerce_variation_options_pricing', function( $loop, $variation
 
 add_action( 'woocommerce_save_product_variation', function( $variation_id, $i ) {
 
-	$keys = [ '_mpn', '_gtin8', '_isbn' ];
+	$keys = [ '_upc', '_mpn', '_gtin8', '_isbn' ];
 
 	foreach ( $keys as $key ) {
 
