@@ -1,8 +1,8 @@
 === WP Data Sync for Woocommerce ===
 Contributors: kevin-brent
-Tags: brand, woocommerce, sync products, sync data, api feed, json feed, data transfer, csv import, data sync
+Tags: woocommerce, api integration, sync products, sync orders, sync data, api feed, json feed, data transfer, csv import, data sync
 Requires at least: 5.0
-Tested up to: 5.9.3
+Tested up to: 6.0
 Requires PHP: 5.6
 Stable tag: /trunk
 License: GPLv2
