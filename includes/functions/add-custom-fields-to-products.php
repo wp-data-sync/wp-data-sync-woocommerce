@@ -11,6 +11,10 @@
 
 namespace WP_DataSync\Woo\App;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Add product data fields.
  */

@@ -2,7 +2,7 @@
 Contributors: kevin-brent
 Tags: woocommerce, api integration, sync products, sync orders, sync data, api feed, json feed, data transfer, csv import, data sync
 Requires at least: 5.0
-Tested up to: 6.0
+Tested up to: 6.0.1
 Requires PHP: 5.6
 Stable tag: /trunk
 License: GPLv2
@@ -35,6 +35,11 @@ Here are a variety of links that we’ve found helpful in explaining our plugin 
 [Developer Documentation - Getting Started](https://wpdatasync.com/documentation-type/getting-started/?affid=admin "Developer Documentation - Getting Started")
 [Developer Documentation - Actions](https://wpdatasync.com/documentation-type/actions/?affid=admin "Developer Documentation - Actions")
 [Developer Documentation - Filters](https://wpdatasync.com/documentation-type/filters/?affid=admin "Developer Documentation - Filters")
+
+== Screenshots ==
+
+1. WooCommerce Product Data Admin
+2. WooCommerce Product Variation Data Admin
 
 == Change Log ==
 
