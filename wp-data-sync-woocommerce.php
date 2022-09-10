@@ -3,7 +3,7 @@
  * Plugin Name: WP Data Sync for WooCommerce
  * Plugin URI:  https://wpdatasync.com/products/
  * Description: Extend WP Data Sync to include additional WooCommecre functionality
- * Version:     2.1.8
+ * Version:     2.1.9
  * Author:      WP Data Sync
  * Author URI:  https://wpdatasync.com
  * License:     GPL2
@@ -12,7 +12,7 @@
  * Domain Path: /languages
  *
  * WC requires at least: 4.0
- * WC tested up to: 6.7.0
+ * WC tested up to: 6.8.2
  *
  * Package:     WP_DataSync
  */
@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $defines = [
-	'WPDS_FOR_WOO_VERSION' => '2.1.8',
+	'WPDS_FOR_WOO_VERSION' => '2.1.9',
 	'WPDS_FOR_WOO_CAP'     => 'manage_options',
 	'WPDS_FOR_WOO_ASSETS'  => plugins_url( 'assets/', __FILE__ ),
 ];
@@ -44,7 +44,7 @@ add_action( 'plugins_loaded', function() {
 
 	// Load text domain
 	add_action( 'init', function() {
-		load_plugin_textdomain( 'wp-data-sync-woocommerce', FALSE, basename( dirname( __FILE__ ) ) . '/languages' );
+		load_plugin_textdomain( 'wp-data-sync-woocommerce', false, basename( dirname( __FILE__ ) ) . '/languages' );
 	} );
 
 } );

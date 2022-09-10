@@ -14,12 +14,13 @@ namespace WP_DataSync\Woo\App;
 add_action( 'init', function() {
 
 	$args = apply_filters( 'wp_data_sync_brand_taxonomy_args', [
-		'labels'            => brand_taxonomy_labels(),
-		'hierarchical'      => TRUE,
-		'show_in_nav_menus'	=> FALSE,
-		'query_var'         => TRUE,
-		'public' 			=> TRUE,
-		'show_tagcloud'		=> FALSE
+		'labels'             => brand_taxonomy_labels(),
+		'hierarchical'       => true,
+		'show_in_nav_menus'	 => false,
+		'query_var'          => true,
+		'public' 			 => true,
+		'show_tagcloud'		 => false,
+		'show_in_quick_edit' => true
 	] );
 
 	register_taxonomy( brand_taxonomy_key(), 'product', $args );
@@ -55,7 +56,7 @@ function brand_taxonomy_labels() {
 		'update_item'       => __( 'Update Brand', 'wp-data-sync-woocommerce' ),
 		'add_new_item'      => __( 'Add New Brand', 'wp-data-sync-woocommerce' ),
 		'new_item_name'     => __( 'New Brand Name', 'wp-data-sync-woocommerce' ),
-		'menu_name'         => __( 'Brand', 'wp-data-sync-woocommerce' ),
+		'menu_name'         => __( 'Brands', 'wp-data-sync-woocommerce' ),
 	] );
 
 }

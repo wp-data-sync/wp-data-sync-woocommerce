@@ -29,7 +29,7 @@ add_filter( 'wp_data_sync_order_items', function( $order_items, $order ) {
 		$order_items[ $item_id ]['item_id'] = $id;
 
 		foreach ( order_item_keys() as $key ) {
-			$order_items[ $item_id ][ $key ] = get_post_meta( $id, "_$key", TRUE );
+			$order_items[ $item_id ][ $key ] = get_post_meta( $id, "_$key", true );
 		}
 
 	}

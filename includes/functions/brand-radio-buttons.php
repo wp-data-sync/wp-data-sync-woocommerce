@@ -41,8 +41,8 @@ add_filter( 'wp_terms_checklist_args', function( $args, $post_id ) {
 						esc_attr( $args['taxonomy'] ),
 						esc_attr( $args['taxonomy'] ),
 						esc_attr( $category->term_id ),
-						esc_attr( checked( in_array( $category->term_id, $args['selected_cats'] ), TRUE, FALSE ) ),
-						esc_attr( disabled( empty( $args['disabled'] ), FALSE, FALSE ) ),
+						esc_attr( checked( in_array( $category->term_id, $args['selected_cats'] ), true, false ) ),
+						esc_attr( disabled( empty( $args['disabled'] ), false, false ) ),
 						esc_html( apply_filters( 'the_category', $category->name ) )
 					);
 
