@@ -16,14 +16,15 @@ Add additional functionality to [WP Data Sync](https://wordpress.org/plugins/wp-
 
 __Includes:__
 
-&#x2611; Manage Backorder Status - WP Data Sync setting
-&#x2611; Product Weight Conversion - - WP Data Sync setting
-&#x2611; Product Price Adjustments - - WP Data Sync setting
+&#x2611; Allow Duplicate SKU
+&#x2611; Manage Backorder Status
+&#x2611; Product Weight Conversion
+&#x2611; Product Price Adjustments
 &#x2611; Brand Taxonomy for Products
-&#x2611; Universal Product Code(upc) - product/variation setting
-&#x2611; Manufacturer Part Number(mpn) - product/variation setting
-&#x2611; Global Trade Item Number(gtin) - product/variation setting
-&#x2611; International Standard Book Number(isbn) - product/variation setting
+&#x2611; Universal Product Code(upc)
+&#x2611; Manufacturer Part Number(mpn)
+&#x2611; Global Trade Item Number(gtin)
+&#x2611; International Standard Book Number(isbn)
 &#x2611; Additional Order Meta Fields
 
 __What if I want to know more about WP Data Sync?__

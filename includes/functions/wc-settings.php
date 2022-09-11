@@ -18,6 +18,49 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_filter( 'wp_data_sync_settings', function( $settings, $_settings ) {
 
 	$settings['woocommerce'][] = [
+		'key' 		=> 'wp_data_sync_allow_duplicate_sku',
+		'label'		=> __( 'Allow Duplicate SKU', 'wp-data-sync-woocommerce' ),
+		'callback'  => 'input',
+		'args'      => [
+			'sanitize_callback' => 'sanitize_text_field',
+			'basename'          => 'checkbox',
+			'type'		        => '',
+			'class'		        => 'allow-duplicate-sku',
+			'placeholder'       => '',
+			'info'              => __( 'Allow WooCommerce to use the same SKU for multiple products or variations.', 'wp-data-sync-woocommerce' )
+		]
+	];
+
+	$settings['woocommerce'][] = [
+		'key' 		=> 'wp_data_sync_update_duplicate_fields',
+		'label'		=> __( 'Update Duplicate Fields', 'wp-data-sync' ),
+		'callback'  => 'input',
+		'args'      => [
+			'sanitize_callback' => [ $_settings, 'sanitize_array' ],
+			'basename'          => 'select-multiple',
+			'name'              => 'wp_data_sync_update_duplicate_fields',
+			'type'		        => '',
+			'class'		        => 'update-duplicate-fields regular-text',
+			'placeholder'       => '',
+			'info'              => __( 'When multiple products use the same indetifier, update the selected fields for all products with a duplicate indetifier value.', 'wp-data-sync' ),
+			'selected'          => get_option( 'wp_data_sync_update_duplicate_fields', [ 'none' ] ),
+			'options'           => apply_filters( 'wp_data_sync_update_duplicate_field_options', [
+				'none'              => __( 'None'),
+				'_manage_stock'     => __( 'Manage Stock', 'woocommerce' ),
+				'_stock'            => __( 'Stock Quantity', 'woocommerce' ),
+				'_backorders'       => __( 'Allow Backorders', 'woocommerce' ),
+				'_low_stock_amount' => __( 'Low Stock Threshold', 'woocommerce' ),
+				'_regular_price'    => __( 'Regular Price', 'woocommerce' ),
+				'_sale_price'       => __( 'Sale Price', 'woocommerce' ),
+				'_weight'           => __( 'Weight', 'woocommerce' ),
+				'_length'           => __( 'Length', 'woocommerce' ),
+				'_width'            => __( 'Width', 'woocommerce' ),
+				'_height'           => __( 'Height', 'woocommerce' )
+			], $_settings )
+		]
+	];
+
+	$settings['woocommerce'][] = [
 		'key' 		=> 'wp_data_sync_manage_backorder_status',
 		'label'		=> __( 'Manage Backorder Status', 'wp-data-sync-woocommerce' ),
 		'callback'  => 'input',
