@@ -1,17 +1,17 @@
-# Copyright (C) 2021 WP Data Sync
-# This file is distributed under the same license as the WP Data Sync for WooCommerce plugin.
+# Copyright (C) 2022 WP Data Sync
+# This file is distributed under the GPL2.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Data Sync for WooCommerce 2.1.0\n"
+"Project-Id-Version: WP Data Sync for WooCommerce 2.1.10\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-data-sync-woocommerce\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-10-22T23:03:09+00:00\n"
+"POT-Creation-Date: 2022-09-11T23:56:40+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.1.0\n"
+"X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: wp-data-sync-woocommerce\n"
 
 #. Plugin Name of the plugin
@@ -34,108 +34,145 @@ msgstr ""
 msgid "https://wpdatasync.com"
 msgstr ""
 
-#: includes/functions/add-custom-fields-to-products.php:22
+#: includes/functions/add-custom-fields-to-products.php:26
+#: includes/functions/add-custom-fields-to-products.php:86
+msgid "UPC"
+msgstr ""
+
+#: includes/functions/add-custom-fields-to-products.php:28
+#: includes/functions/add-custom-fields-to-products.php:89
+msgid "Universal Product Code"
+msgstr ""
+
+#: includes/functions/add-custom-fields-to-products.php:33
+#: includes/functions/add-custom-fields-to-products.php:95
 msgid "MPN"
 msgstr ""
 
-#: includes/functions/add-custom-fields-to-products.php:24
+#: includes/functions/add-custom-fields-to-products.php:35
+#: includes/functions/add-custom-fields-to-products.php:98
 msgid "Manufacturer Part Number"
 msgstr ""
 
-#: includes/functions/add-custom-fields-to-products.php:29
+#: includes/functions/add-custom-fields-to-products.php:40
+#: includes/functions/add-custom-fields-to-products.php:104
 msgid "GTIN"
 msgstr ""
 
-#: includes/functions/add-custom-fields-to-products.php:31
+#: includes/functions/add-custom-fields-to-products.php:42
+#: includes/functions/add-custom-fields-to-products.php:107
 msgid "Global Trade Item Number"
 msgstr ""
 
-#: includes/functions/add-custom-fields-to-products.php:36
+#: includes/functions/add-custom-fields-to-products.php:47
+#: includes/functions/add-custom-fields-to-products.php:113
 msgid "ISBN"
 msgstr ""
 
-#: includes/functions/add-custom-fields-to-products.php:38
+#: includes/functions/add-custom-fields-to-products.php:49
+#: includes/functions/add-custom-fields-to-products.php:116
 msgid "International Standard Book Number"
 msgstr ""
 
-#: includes/functions/wc-settings.php:23
-msgid "Manage Backorder Status"
-msgstr ""
-
-#: includes/functions/wc-settings.php:31
-msgid "Set backorder status based on stock quantity. NOTE: Allow backorders must be set for each product."
-msgstr ""
-
-#: includes/functions/wc-settings.php:36
-msgid "Convert Product Weight"
-msgstr ""
-
-#: includes/functions/wc-settings.php:44
-msgid "Convert the product weight. If you do not see the conversion you need. Please contact our support team to have it added."
-msgstr ""
-
-#: includes/functions/wc-settings.php:46
-msgid "Do Not Convert Weight"
-msgstr ""
-
-#: includes/functions/wc-settings.php:47
-msgid "Grams to Kilograms"
-msgstr ""
-
-#: includes/functions/wc-settings.php:48
-msgid "Kilograms to Grams"
-msgstr ""
-
-#: includes/functions/wc-settings.php:49
-msgid "Pounds to Ounces"
-msgstr ""
-
-#: includes/functions/wc-settings.php:50
-msgid "Ounces to Pounds"
-msgstr ""
-
-#: includes/functions/register-brand-taxonomy.php:48
+#: includes/functions/register-brand-taxonomy.php:49
 msgctxt "Brands"
 msgid "Brands"
 msgstr ""
 
-#: includes/functions/register-brand-taxonomy.php:49
+#: includes/functions/register-brand-taxonomy.php:50
 msgctxt "Brand"
 msgid "Brand"
 msgstr ""
 
-#: includes/functions/register-brand-taxonomy.php:50
+#: includes/functions/register-brand-taxonomy.php:51
 msgid "Search Brands"
 msgstr ""
 
-#: includes/functions/register-brand-taxonomy.php:51
+#: includes/functions/register-brand-taxonomy.php:52
 msgid "All Brands"
 msgstr ""
 
-#: includes/functions/register-brand-taxonomy.php:52
+#: includes/functions/register-brand-taxonomy.php:53
 msgid "Parent Brand"
 msgstr ""
 
-#: includes/functions/register-brand-taxonomy.php:53
+#: includes/functions/register-brand-taxonomy.php:54
 msgid "Parent Brand:"
 msgstr ""
 
-#: includes/functions/register-brand-taxonomy.php:54
+#: includes/functions/register-brand-taxonomy.php:55
 msgid "View Brand"
 msgstr ""
 
-#: includes/functions/register-brand-taxonomy.php:55
+#: includes/functions/register-brand-taxonomy.php:56
 msgid "Update Brand"
 msgstr ""
 
-#: includes/functions/register-brand-taxonomy.php:56
+#: includes/functions/register-brand-taxonomy.php:57
 msgid "Add New Brand"
 msgstr ""
 
-#: includes/functions/register-brand-taxonomy.php:57
+#: includes/functions/register-brand-taxonomy.php:58
 msgid "New Brand Name"
 msgstr ""
 
-#: includes/functions/register-brand-taxonomy.php:58
-msgid "Brand"
+#: includes/functions/register-brand-taxonomy.php:59
+msgid "Brands"
+msgstr ""
+
+#: includes/functions/wc-settings.php:22
+msgid "Allow Duplicate SKU"
+msgstr ""
+
+#: includes/functions/wc-settings.php:30
+msgid "Allow WooCommerce to use the same SKU for multiple products or variations."
+msgstr ""
+
+#: includes/functions/wc-settings.php:65
+msgid "Manage Backorder Status"
+msgstr ""
+
+#: includes/functions/wc-settings.php:73
+msgid "Set backorder status based on stock quantity. NOTE: Allow backorders must be set for each product."
+msgstr ""
+
+#: includes/functions/wc-settings.php:79
+msgid "Convert Product Weight"
+msgstr ""
+
+#: includes/functions/wc-settings.php:87
+msgid "Convert the product weight. If you do not see the conversion you need. Please contact our support team to have it added."
+msgstr ""
+
+#: includes/functions/wc-settings.php:89
+msgid "Do Not Convert Weight"
+msgstr ""
+
+#: includes/functions/wc-settings.php:90
+msgid "Grams to Kilograms"
+msgstr ""
+
+#: includes/functions/wc-settings.php:91
+msgid "Kilograms to Grams"
+msgstr ""
+
+#: includes/functions/wc-settings.php:92
+msgid "Pounds to Ounces"
+msgstr ""
+
+#: includes/functions/wc-settings.php:93
+msgid "Ounces to Pounds"
+msgstr ""
+
+#: includes/functions/wc-settings.php:100
+msgid "Regular Price Adjustment (%)"
+msgstr ""
+
+#: includes/functions/wc-settings.php:108
+#: includes/functions/wc-settings.php:122
+msgid "Multiply price to add/subtract price adjustment."
+msgstr ""
+
+#: includes/functions/wc-settings.php:114
+msgid "Sale Price Adjustment (%)"
 msgstr ""
