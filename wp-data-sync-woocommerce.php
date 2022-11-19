@@ -3,7 +3,7 @@
  * Plugin Name: WP Data Sync for WooCommerce
  * Plugin URI:  https://wpdatasync.com/products/
  * Description: Extend WP Data Sync to include additional WooCommecre functionality
- * Version:     2.1.10
+ * Version:     2.1.11
  * Author:      WP Data Sync
  * Author URI:  https://wpdatasync.com
  * License:     GPL2
@@ -12,7 +12,7 @@
  * Domain Path: /languages
  *
  * WC requires at least: 4.0
- * WC tested up to: 6.8.2
+ * WC tested up to: 7.1.0
  *
  * Package:     WP_DataSync
  */

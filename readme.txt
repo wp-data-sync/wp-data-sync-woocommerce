@@ -2,8 +2,8 @@
 Contributors: kevin-brent
 Tags: woocommerce, api integration, sync products, sync orders, sync data, api feed, json feed, data transfer, csv import, data sync
 Requires at least: 5.0
-Tested up to: 6.0.2
-Requires PHP: 5.6
+Tested up to: 6.1.1
+Requires PHP: 7.4
 Stable tag: /trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
