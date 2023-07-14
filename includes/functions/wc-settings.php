@@ -27,7 +27,7 @@ add_filter( 'wp_data_sync_settings', function( $settings, $_settings ) {
 			'type'		        => '',
 			'class'		        => 'allow-duplicate-sku',
 			'placeholder'       => '',
-			'info'              => __( 'Allow WooCommerce to use the same SKU for multiple products or variations.', 'wp-data-sync-woocommerce' )
+			'info'              => __( 'Allow WooCommerce to use the same SKU for multiple products or variations. This can cause issues with some functionality. Proceed at your own risk.', 'wp-data-sync-woocommerce' )
 		]
 	];
 
